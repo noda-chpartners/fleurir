@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import { shop } from '../data/shop';
+import originalLogo from '../assets/line_oa_chat_261019_163947.jpg';
+import qr from '../assets/line_qr.jpg';
+---
+<section class="contact-visual section-pad" aria-labelledby="contact-title">
+  <div class="original-brand" data-reveal><Image src={originalLogo} alt="スナックFleurir フルリール。月と花と星をあしらったお店のロゴ" widths={[240, 400]} sizes="(max-width: 600px) 150px, 240px" loading="lazy" /></div>
+  <div class="contact-visual-copy" data-reveal><p class="eyebrow">SEE YOU AT FLEURIR</p><h2 id="contact-title">今夜も、Fleurirで。</h2><a class="contact-phone" href={shop.phoneHref}><Icon name="phone" />{shop.phone}<Icon name="arrow" /></a><p>20:00 — LAST ／ 水曜日・日曜日 定休</p></div>
+  <div class="line-contact"><Image src={qr} alt="FleurirのLINE QRコード" width={180} height={180} format="png" loading="lazy" /><div><span>LINEでもつながる。</span><a href={shop.line} target="_blank" rel="noopener noreferrer">LINEを開く <Icon name="external" /><span class="sr-only">（新しいタブで開きます）</span></a></div></div>
+</section>

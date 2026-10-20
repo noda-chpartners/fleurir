@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+import { plans } from '../data/shop';
+import room from '../assets/line_oa_chat_261019_163951.jpg';
+---
+<section class="rates section-pad" id="plans" aria-labelledby="plans-title">
+  <div class="rates-photo" data-image-reveal>
+    <Image src={room} alt="明るいソファ席とカラオケのあるFleurirの店内" widths={[480, 720, 1000]} sizes="(max-width: 768px) 86vw, 40vw" loading="lazy" />
+    <div class="rates-seats"><span><b>2<span>F</span></b>20席</span><span><b>3<span>F</span></b>10席</span><span>あなたの夜に、<br />ちょうどいい場所。</span></div>
+  </div>
+  <div class="rates-content" data-reveal>
+    <p class="eyebrow"><span>02</span> DRINK + KARAOKE</p>
+    <h2 id="plans-title">気軽に飲んで、<br />思いきり歌って。</h2>
+    <div class="price-sheet">
+      <div class="sheet-heading"><span>Fleurir's night menu</span><span>歌い放題・飲み放題</span></div>
+      {plans.map((plan, i) => <div class="price-row" data-price-row><span class="plan-index">0{i + 1}</span><div class="plan-time"><strong>{plan.minutes}</strong><span>min / 分</span></div><div class="plan-description">歌い放題<br />飲み放題</div><div class="plan-price"><span>¥</span><strong>{plan.price}</strong></div></div>)}
+      <p class="price-note">料金・対象ドリンク・延長の詳細はお電話でお問い合わせください。</p>
+    </div>
+  </div>
+</section>

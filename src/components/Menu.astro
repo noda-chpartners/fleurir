@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import { snacks } from '../data/shop';
+import poster from '../assets/line_oa_chat_261019_163931.jpg';
+---
+<section class="food-menu section-pad" id="menu" aria-labelledby="menu-title">
+  <div class="food-heading" data-reveal><div><p class="eyebrow"><span>03</span> FLEURIR'S FAVOURITES</p><h2 id="menu-title">一杯と、一曲と、<br />おいしいひと皿。</h2></div><p>おしゃべりの合間に、ひと口。<br />お店で人気の5品をご紹介。</p></div>
+  <div class="food-grid">
+    <figure class="food-featured" data-image-reveal>
+      <div class="food-photo"><img src="/images/menu-egg.webp" width="1200" height="800" alt="だし巻き玉子の料理イメージ" loading="lazy" /><span class="food-stamp">人気の<br />ひと皿 ✧</span></div>
+      <figcaption><span class="food-number">01</span><div><h3>{snacks[0].name}</h3><p>{snacks[0].description}</p></div></figcaption>
+    </figure>
+    <figure class="food-small" data-image-reveal>
+      <div class="food-photo"><img src="/images/menu-snacks.webp" width="1200" height="800" alt="それぞれ別の皿に盛られた枝豆とポテトフライの料理イメージ" loading="lazy" /></div>
+      <figcaption><span class="food-number">02 / 03</span><div><h3>{snacks[1].name} <span>／</span> {snacks[2].name}</h3><p>飲みながらつまみたい、定番のおとも。</p></div></figcaption>
+    </figure>
+    <figure class="food-small" data-image-reveal>
+      <div class="food-photo"><img src="/images/menu-dessert.webp" width="1200" height="800" alt="アイスをのせたホットケーキの料理イメージ" loading="lazy" /></div>
+      <figcaption><span class="food-number">04</span><div><h3>{snacks[3].name}</h3><p>{snacks[3].description}</p></div></figcaption>
+    </figure>
+  </div>
+  <p class="food-image-note">料理画像はイメージです。盛り付け・器は実際の提供と異なります。各料理は単品メニューです。</p>
+  <div class="menu-bottom">
+    <div class="one-more" data-reveal><span class="food-number">05</span><h3>{snacks[4].name}</h3><p>{snacks[4].description}</p><span aria-hidden="true">✧</span></div>
+    <button class="poster-trigger" type="button" data-menu-open aria-haspopup="dialog" aria-controls="menu-dialog"><Image src={poster} alt="Fleurirの軽食メニューポスターのサムネイル" width={100} height={150} loading="lazy" /><span><small>お店のメニューを、もう少し。</small><b>メニューポスターを見る</b><span>参考メニュー・タップで拡大</span></span><Icon name="external" /></button>
+  </div>
+  <dialog id="menu-dialog" class="menu-dialog" aria-labelledby="menu-dialog-title" data-lenis-prevent>
+    <div class="dialog-header"><div><h2 id="menu-dialog-title">Fleurirのメニューポスター</h2><p>掲載内容・料金は店頭でご確認ください。</p></div><form method="dialog"><button class="dialog-close" aria-label="メニューを閉じる" autofocus>×</button></form></div>
+    <div class="dialog-scroll"><Image src={poster} alt="Fleurirの軽食メニューポスター。掲載内容・料金は店頭でご確認ください" width={900} loading="lazy" /></div>
+  </dialog>
+</section>

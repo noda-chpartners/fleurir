@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import { shop } from '../data/shop';
+import people from '../assets/line_oa_chat_261019_164007.jpg';
+import celebration from '../assets/line_oa_chat_261019_164009.jpg';
+import room from '../assets/line_oa_chat_261019_164017.jpg';
+---
+<section class="welcome section-pad" id="about" aria-labelledby="welcome-title">
+  <div class="welcome-heading" data-reveal>
+    <div><p class="eyebrow"><span>01</span> WELCOME TO FLEURIR</p><h2 id="welcome-title">笑顔が集まる、<br />Fleurirの夜。</h2></div>
+    <p>好きな歌と、いつもの一杯。<br />気取らず過ごせる、飯能のスナックです。</p>
+  </div>
+  <div class="welcome-gallery">
+    <figure class="welcome-people" data-image-reveal>
+      <Image src={people} alt="Fleurirで笑顔を見せる2人の写真" widths={[480, 720, 1000]} sizes="(max-width: 600px) 86vw, 40vw" loading="eager" />
+      <figcaption><span>SMILES, SONGS & GOOD TIMES</span><span>何気ない夜も、楽しい夜に。</span></figcaption>
+    </figure>
+    <figure class="welcome-room" data-image-reveal>
+      <Image src={room} alt="カラオケモニターとソファ席があるFleurirの店内" widths={[480, 800, 1100]} sizes="(max-width: 600px) 48vw, 48vw" loading="lazy" />
+      <figcaption>くつろいで、もう一曲。</figcaption>
+    </figure>
+    <figure class="welcome-party" data-image-reveal>
+      <Image src={celebration} alt="花やボトルに囲まれたFleurirのお祝いのひととき" widths={[480, 800, 1100]} sizes="(max-width: 600px) 48vw, 48vw" loading="lazy" />
+      <figcaption>みんなで過ごす、特別なひととき。</figcaption>
+    </figure>
+    <span class="gallery-spark" aria-hidden="true">✧</span>
+  </div>
+  <a class="welcome-instagram" href={shop.instagram} target="_blank" rel="noopener noreferrer">
+    <span><Icon name="instagram" /><span>お店の日常は、Instagramで。</span></span><span>@fleurir755 <Icon name="external" /></span><span class="sr-only">（新しいタブで開きます）</span>
+  </a>
+</section>

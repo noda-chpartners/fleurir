@@ -1,0 +1,1006 @@
+/* The photographs set the pace of the revised page. */
+.hero-wordmark {
+  font-size: clamp(95px, 12vw, 170px);
+  right: 7vw;
+  bottom: 47px;
+}
+.hero {
+  height: min(800px, calc(100svh - 100px));
+}
+.hero-bottom > a {
+  font-size: 9px;
+}
+.welcome {
+  padding-top: 76px;
+  padding-bottom: 52px;
+}
+.welcome-heading,
+.food-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+.welcome-heading h2,
+.rates h2,
+.food-heading h2 {
+  font-family: var(--serif);
+  font-size: clamp(30px, 3.2vw, 46px);
+  line-height: 1.7;
+  letter-spacing: 0.07em;
+  margin: 18px 0 0;
+}
+.welcome-heading > p,
+.food-heading > p {
+  font-size: 14px;
+  line-height: 2.2;
+  padding-bottom: 7px;
+}
+.welcome-gallery {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  grid-template-rows: 330px 270px;
+  gap: 20px;
+}
+.welcome-gallery figure {
+  position: relative;
+  overflow: hidden;
+  background: #c6b9ac;
+}
+.welcome-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.welcome-people {
+  grid-row: 1 / 3;
+}
+.welcome-people img {
+  object-position: center 44%;
+}
+.welcome-room img {
+  object-position: center 55%;
+}
+.welcome-party img {
+  object-position: center 38%;
+}
+.welcome-gallery figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 35px 23px 18px;
+  color: white;
+  background: linear-gradient(transparent, #152327a6);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+.welcome-people figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.welcome-people figcaption > span:first-child {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+.gallery-spark {
+  position: absolute;
+  z-index: 2;
+  left: 42%;
+  top: 45%;
+  font-size: 68px;
+  color: var(--paper);
+  pointer-events: none;
+  line-height: 1;
+  text-shadow: 0 1px 8px #0002;
+}
+.welcome-instagram {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--line);
+  padding: 22px 0 18px;
+  font-size: 12px;
+}
+.welcome-instagram > span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.welcome-instagram > span:nth-child(2) {
+  font-family: var(--latin);
+  font-size: 21px;
+  font-style: italic;
+}
+.welcome-instagram .icon {
+  width: 19px;
+  height: 19px;
+}
+.welcome-instagram:hover {
+  color: var(--rose);
+}
+
+.rates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5.5vw;
+  align-items: center;
+  background: var(--blue);
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.rates-photo > img {
+  height: 455px;
+  object-fit: cover;
+  object-position: center 63%;
+}
+.rates-seats {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 22px;
+  border-top: 1px solid #18282c40;
+  padding-top: 17px;
+}
+.rates-seats > span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.rates-seats b {
+  font-family: var(--latin);
+  font-size: 45px;
+  line-height: 1;
+  font-weight: 400;
+}
+.rates-seats b > span {
+  font-size: 23px;
+}
+.rates-seats > span:last-child {
+  font-size: 10px;
+  margin-left: auto;
+  line-height: 1.9;
+}
+.rates h2 {
+  font-size: clamp(28px, 2.5vw, 36px);
+  margin: 14px 0 20px;
+}
+.rates .price-sheet {
+  padding-top: 0;
+}
+.rates .sheet-heading {
+  padding-bottom: 16px;
+}
+.rates .sheet-heading > span:first-child {
+  font-size: 22px;
+}
+.rates .sheet-heading > span:last-child {
+  font-size: 10px;
+  letter-spacing: 0.02em;
+}
+.rates .price-row {
+  padding: 21px 0;
+  grid-template-columns: 20px 1fr 0.9fr 1.5fr;
+  gap: 9px;
+  border-bottom-color: #18282c40;
+}
+.rates .plan-time strong {
+  font-size: 58px;
+}
+.rates .plan-price strong {
+  font-size: clamp(44px, 4.5vw, 64px);
+}
+.rates .price-note {
+  color: #3e5358;
+  font-size: 11px;
+  margin-top: 18px;
+}
+
+.food-menu {
+  padding-top: 76px;
+  padding-bottom: 68px;
+}
+.food-heading {
+  margin-bottom: 35px;
+}
+.food-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 24px 34px;
+}
+.food-grid figure {
+  min-width: 0;
+}
+.food-featured {
+  grid-row: 1 / 3;
+}
+.food-photo {
+  position: relative;
+  overflow: hidden;
+  background: #243236;
+}
+.food-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.food-featured .food-photo {
+  height: 510px;
+}
+.food-small .food-photo {
+  height: 205px;
+}
+.food-grid figcaption {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  padding-top: 15px;
+}
+.food-number {
+  color: var(--rose);
+  font-family: var(--latin);
+  font-size: 17px;
+  font-style: italic;
+  white-space: nowrap;
+}
+.food-grid h3 {
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.025em;
+}
+.food-featured h3 {
+  font-size: 28px;
+}
+.food-small h3 > span {
+  color: #828781;
+  font-size: 14px;
+  padding: 0 4px;
+}
+.food-grid figcaption p {
+  font-size: 11px;
+  margin-top: 5px;
+  color: #596365;
+}
+.food-stamp {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: grid;
+  place-content: center;
+  width: 72px;
+  height: 72px;
+  border: 1px solid var(--paper);
+  border-radius: 50%;
+  color: var(--paper);
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+  transform: rotate(10deg);
+  background: #18282c70;
+}
+.food-image-note {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 10px;
+  color: #596365;
+  line-height: 1.8;
+}
+.menu-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+  align-items: center;
+  margin-top: 35px;
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+}
+.one-more {
+  display: grid;
+  grid-template-columns: 30px 1fr 40px;
+  gap: 8px 15px;
+  align-items: baseline;
+}
+.one-more h3 {
+  font-family: var(--serif);
+  font-size: 24px;
+}
+.one-more p {
+  grid-column: 2;
+  font-size: 12px;
+  color: #596365;
+}
+.one-more > span:last-child {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  color: var(--rose);
+  font-size: 40px;
+  align-self: center;
+}
+.poster-trigger {
+  appearance: none;
+  border: 0;
+  background: #e9e4da;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 21px;
+  padding: 15px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.poster-trigger > img {
+  width: 69px;
+  height: 104px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.poster-trigger > span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.poster-trigger small,
+.poster-trigger > span > span {
+  font-size: 10px;
+}
+.poster-trigger b {
+  font-weight: 500;
+  font-size: 14px;
+}
+.poster-trigger > .icon {
+  margin-left: auto;
+  width: 20px;
+  transition: transform 0.25s;
+}
+.poster-trigger:hover > .icon {
+  transform: translate(3px, -3px);
+}
+.menu-dialog {
+  width: min(820px, 94vw);
+  max-height: 90svh;
+  padding: 0;
+  border: 0;
+  background: var(--paper);
+  color: var(--ink);
+}
+.menu-dialog::backdrop {
+  background: #122024d9;
+}
+.dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 24px;
+}
+.dialog-header h2 {
+  font-size: 17px;
+  font-family: var(--serif);
+}
+.dialog-header p {
+  font-size: 11px;
+  margin-top: 5px;
+}
+.dialog-header form {
+  margin: 0;
+}
+.dialog-close {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font-size: 29px;
+  line-height: 1;
+  cursor: pointer;
+}
+.dialog-scroll {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  max-height: calc(90svh - 100px);
+  padding: 0 24px 24px;
+}
+.dialog-scroll > img {
+  width: 100%;
+  height: auto;
+}
+
+.access {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.access-title {
+  margin-bottom: 36px;
+}
+.access-title h2 {
+  font-size: clamp(28px, 2.8vw, 39px);
+}
+.access-layout {
+  gap: 8vw;
+}
+.contact-visual {
+  display: grid;
+  grid-template-columns: 190px 1fr 230px;
+  gap: 42px;
+  align-items: center;
+  background: var(--ink);
+  color: var(--paper);
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+.original-brand {
+  background: #c9e7f4;
+  padding: 7px;
+}
+.original-brand img {
+  width: 100%;
+  height: auto;
+}
+.contact-visual h2 {
+  font-family: var(--serif);
+  font-size: 31px;
+  line-height: 1.7;
+  margin: 15px 0 0;
+}
+.contact-visual .contact-phone {
+  font-size: clamp(26px, 3vw, 43px);
+  gap: 14px;
+  margin: 15px 0 12px;
+  padding-bottom: 8px;
+  white-space: nowrap;
+}
+.contact-visual .contact-phone > .icon:first-child {
+  width: 19px;
+  height: 19px;
+}
+.contact-visual .contact-phone > .icon:last-child {
+  width: 22px;
+  height: 22px;
+  margin-left: 0;
+}
+.contact-visual-copy > p:last-child {
+  font-size: 10px;
+  letter-spacing: 0.02em;
+}
+.line-contact {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 17px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.line-contact > img {
+  width: 85px;
+  height: 85px;
+}
+.line-contact > div > span {
+  font-size: 10px;
+}
+.line-contact a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 0;
+  font-size: 12px;
+  border-bottom: 1px solid var(--ink);
+}
+.line-contact a > .icon {
+  width: 16px;
+  height: 16px;
+}
+.line-contact p {
+  font-size: 10px;
+}
+.skip-link:not(:focus-visible) {
+  transform: translateY(-150%);
+}
+
+@media (max-width: 1100px) {
+  .welcome-gallery {
+    grid-template-rows: 290px 230px;
+  }
+  .rates {
+    gap: 4vw;
+  }
+  .rates-photo > img {
+    height: 420px;
+  }
+  .rates-seats {
+    gap: 20px;
+  }
+  .rates-seats > span:last-child {
+    display: none;
+  }
+  .rates .plan-time strong {
+    font-size: 49px;
+  }
+  .rates .plan-price strong {
+    font-size: 48px;
+  }
+  .rates .plan-description {
+    font-size: 11px;
+  }
+  .food-featured .food-photo {
+    height: 470px;
+  }
+  .food-small .food-photo {
+    height: 185px;
+  }
+  .food-grid h3 {
+    font-size: 18px;
+  }
+  .food-featured h3 {
+    font-size: 25px;
+  }
+  .poster-trigger {
+    gap: 13px;
+  }
+  .poster-trigger b {
+    font-size: 12px;
+  }
+  .contact-visual {
+    grid-template-columns: 145px 1fr 210px;
+    gap: 25px;
+  }
+  .contact-visual h2 {
+    font-size: 27px;
+  }
+  .contact-visual .contact-phone {
+    font-size: 31px;
+    gap: 9px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    height: 760px;
+  }
+  .hero-wordmark {
+    font-size: 120px;
+    bottom: 60px;
+  }
+  .welcome {
+    padding-top: 55px;
+    padding-bottom: 40px;
+  }
+  .welcome-heading,
+  .food-heading {
+    align-items: flex-start;
+  }
+  .welcome-heading h2,
+  .food-heading h2 {
+    font-size: 34px;
+  }
+  .welcome-heading > p,
+  .food-heading > p {
+    font-size: 12px;
+    align-self: flex-end;
+  }
+  .welcome-gallery {
+    grid-template-rows: 240px 205px;
+    gap: 14px;
+  }
+  .welcome-gallery figcaption {
+    padding: 30px 14px 13px;
+    font-size: 9px;
+  }
+  .welcome-people figcaption > span:first-child {
+    font-size: 7px;
+  }
+  .gallery-spark {
+    font-size: 48px;
+    left: 41%;
+  }
+  .welcome-instagram {
+    font-size: 10px;
+    padding-top: 18px;
+  }
+  .welcome-instagram > span:nth-child(2) {
+    font-size: 18px;
+  }
+  .rates {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .rates-photo > img {
+    height: 365px;
+  }
+  .rates-seats {
+    justify-content: space-between;
+    margin-top: 17px;
+    padding-top: 14px;
+  }
+  .rates-seats > span:last-child {
+    display: block;
+    margin-left: 0;
+  }
+  .rates-content h2 {
+    font-size: 32px;
+  }
+  .rates .price-row {
+    grid-template-columns: 23px 1fr 1fr 1.5fr;
+    padding: 23px 0;
+  }
+  .rates .plan-time strong {
+    font-size: 63px;
+  }
+  .rates .plan-price strong {
+    font-size: 62px;
+  }
+  .rates .plan-description {
+    font-size: 13px;
+  }
+  .food-menu {
+    padding-top: 55px;
+    padding-bottom: 50px;
+  }
+  .food-heading {
+    display: block;
+    margin-bottom: 27px;
+  }
+  .food-heading > p {
+    margin-top: 17px;
+  }
+  .food-grid {
+    gap: 23px 20px;
+    grid-template-columns: 1.1fr 1fr;
+  }
+  .food-featured .food-photo {
+    height: 430px;
+  }
+  .food-small .food-photo {
+    height: 160px;
+  }
+  .food-grid figcaption {
+    gap: 9px;
+    padding-top: 11px;
+  }
+  .food-number {
+    font-size: 13px;
+  }
+  .food-grid h3 {
+    font-size: 15px;
+  }
+  .food-featured h3 {
+    font-size: 23px;
+  }
+  .food-grid figcaption p {
+    font-size: 10px;
+  }
+  .food-image-note {
+    text-align: left;
+    font-size: 9px;
+  }
+  .food-stamp {
+    width: 59px;
+    height: 59px;
+    font-size: 10px;
+    right: 12px;
+    top: 12px;
+  }
+  .menu-bottom {
+    gap: 20px;
+  }
+  .one-more {
+    grid-template-columns: 20px 1fr;
+    gap: 6px 10px;
+  }
+  .one-more h3 {
+    font-size: 21px;
+  }
+  .one-more p {
+    font-size: 11px;
+  }
+  .one-more > span:last-child {
+    display: none;
+  }
+  .poster-trigger > img {
+    width: 51px;
+    height: 77px;
+  }
+  .poster-trigger > .icon {
+    display: none;
+  }
+  .poster-trigger b {
+    font-size: 11px;
+  }
+  .poster-trigger small,
+  .poster-trigger > span > span {
+    font-size: 8px;
+  }
+  .access {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .contact-visual {
+    grid-template-columns: 145px 1fr;
+    gap: 25px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .contact-visual h2 {
+    font-size: 27px;
+  }
+  .contact-visual .contact-phone {
+    font-size: 32px;
+  }
+  .line-contact {
+    grid-column: 1 / -1;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px;
+  }
+  .line-contact > img {
+    width: 80px;
+    height: 80px;
+  }
+  .line-contact > div > span {
+    font-size: 12px;
+  }
+  .line-contact a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .welcome-heading {
+    display: block;
+  }
+  .welcome-heading h2 {
+    font-size: 32px;
+  }
+  .welcome-heading > p {
+    margin-top: 18px;
+    font-size: 13px;
+  }
+  .welcome-gallery {
+    grid-template-columns: 1.1fr 1fr;
+    grid-template-rows: 360px 185px;
+    gap: 12px;
+  }
+  .welcome-people {
+    grid-row: 1;
+    grid-column: 1 / -1;
+  }
+  .welcome-people img {
+    object-position: center 35%;
+  }
+  .welcome-room {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .welcome-party {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .welcome-room img {
+    object-position: 58% center;
+  }
+  .welcome-party img {
+    object-position: 63% center;
+  }
+  .welcome-gallery figcaption {
+    font-size: 8px;
+    padding: 25px 11px 10px;
+  }
+  .welcome-people figcaption {
+    padding: 38px 19px 17px;
+    font-size: 11px;
+  }
+  .gallery-spark {
+    top: 59%;
+    left: auto;
+    right: 4px;
+    font-size: 44px;
+  }
+  .welcome-instagram {
+    gap: 12px;
+  }
+  .welcome-instagram > span:first-child {
+    gap: 8px;
+  }
+  .welcome-instagram > span:nth-child(2) {
+    font-size: 17px;
+    gap: 5px;
+  }
+  .welcome-instagram .icon {
+    width: 17px;
+    height: 17px;
+  }
+  .rates-photo > img {
+    height: 325px;
+  }
+  .rates h2 {
+    font-size: 29px;
+  }
+  .rates .plan-time strong {
+    font-size: 55px;
+  }
+  .rates .plan-price strong {
+    font-size: 51px;
+  }
+  .rates .plan-description {
+    font-size: 11px;
+  }
+  .rates .price-row {
+    gap: 8px;
+    grid-template-columns: 17px 1fr 0.85fr 1.4fr;
+  }
+  .food-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 26px 17px;
+  }
+  .food-featured {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .food-featured .food-photo {
+    height: 310px;
+  }
+  .food-small .food-photo {
+    height: 155px;
+  }
+  .food-small figcaption {
+    display: block;
+  }
+  .food-small .food-number {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+  .food-grid h3 {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .food-featured h3 {
+    font-size: 26px;
+  }
+  .food-small h3 > span {
+    padding: 0;
+    font-size: 10px;
+  }
+  .food-small figcaption p {
+    font-size: 10px;
+  }
+  .food-menu {
+    padding-bottom: 40px;
+  }
+  .food-heading h2 {
+    font-size: 30px;
+  }
+  .menu-bottom {
+    grid-template-columns: 1fr;
+    gap: 23px;
+    margin-top: 23px;
+    padding-top: 21px;
+  }
+  .one-more {
+    grid-template-columns: 26px 1fr 35px;
+  }
+  .one-more > span:last-child {
+    display: block;
+    font-size: 32px;
+  }
+  .poster-trigger {
+    gap: 20px;
+    padding: 14px 18px;
+  }
+  .poster-trigger > img {
+    width: 57px;
+    height: 86px;
+  }
+  .poster-trigger b {
+    font-size: 13px;
+  }
+  .poster-trigger small,
+  .poster-trigger > span > span {
+    font-size: 10px;
+  }
+  .poster-trigger > .icon {
+    display: block;
+    width: 17px;
+  }
+  .dialog-header {
+    padding: 14px;
+    gap: 10px;
+  }
+  .dialog-header h2 {
+    font-size: 14px;
+  }
+  .dialog-header p {
+    font-size: 10px;
+  }
+  .dialog-scroll {
+    padding: 0 14px 14px;
+  }
+  .contact-visual {
+    grid-template-columns: 105px 1fr;
+    gap: 20px 17px;
+  }
+  .contact-visual h2 {
+    font-size: 22px;
+    margin-top: 9px;
+  }
+  .contact-visual .eyebrow {
+    font-size: 7px;
+    letter-spacing: 0.08em;
+  }
+  .contact-visual .contact-phone {
+    font-size: 24px;
+    gap: 5px;
+    margin: 10px 0;
+  }
+  .contact-visual .contact-phone > .icon:first-child {
+    width: 13px;
+    height: 13px;
+    margin-right: 0;
+  }
+  .contact-visual .contact-phone > .icon:last-child {
+    display: none;
+  }
+  .contact-visual-copy > p:last-child {
+    font-size: 8px;
+    line-height: 1.9;
+  }
+}
+@media (max-width: 380px) {
+  .welcome-instagram > span:first-child > span {
+    font-size: 9px;
+  }
+  .welcome-instagram > span:nth-child(2) {
+    font-size: 15px;
+  }
+  .welcome-gallery {
+    grid-template-rows: 325px 160px;
+  }
+  .rates-seats {
+    gap: 16px;
+  }
+  .rates-seats b {
+    font-size: 38px;
+  }
+  .rates-seats > span {
+    gap: 8px;
+    font-size: 11px;
+  }
+  .rates-seats > span:last-child {
+    font-size: 8px;
+  }
+  .rates .plan-price strong {
+    font-size: 44px;
+  }
+  .rates .plan-time strong {
+    font-size: 50px;
+  }
+  .rates .plan-price > span {
+    font-size: 18px;
+  }
+  .rates .sheet-heading > span:first-child {
+    font-size: 20px;
+  }
+  .rates .sheet-heading > span:last-child {
+    font-size: 9px;
+  }
+  .food-small .food-photo {
+    height: 140px;
+  }
+  .contact-visual {
+    grid-template-columns: 90px 1fr;
+    gap: 16px 13px;
+  }
+  .contact-visual h2 {
+    font-size: 20px;
+  }
+  .contact-visual .contact-phone {
+    font-size: 23px;
+  }
+}

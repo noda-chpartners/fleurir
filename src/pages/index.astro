@@ -1,16 +1,56 @@
 ---
+import { Image } from 'astro:assets';
+import Logo from '../components/Logo.astro';
+import Icon from '../components/Icon.astro';
+import { shop } from '../data/shop';
+import Welcome from '../components/Welcome.astro';
+import Rates from '../components/Rates.astro';
+import Menu from '../components/Menu.astro';
+import Contact from '../components/Contact.astro';
+import '../styles/global.css';
+import '../styles/revision.css';
+import '../styles/brand.css';
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#cbe7f6" />
+    <meta name="description" content="飯能駅から徒歩1分、スナックFleurir（フルリール）。歌い放題・飲み放題60分2,500円、90分3,500円。20時からLASTまで。気軽に飲んで、歌って、楽しい夜を。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:title" content="Fleurir（フルリール）｜今夜は、もう一曲。" />
+    <meta property="og:description" content="飯能駅から徒歩1分。歌って、飲んで、気軽に過ごす。2階のスナック Fleurirへ。" />
+    <meta property="og:image" content="/images/hero-desktop.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Fleurir（フルリール）｜飯能駅徒歩1分のスナック</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">本文へスキップ</a>
+    <header class="site-header">
+      <a class="header-logo" href="#top" aria-label="Fleurir トップへ"><Logo /></a>
+      <nav aria-label="メインナビゲーション"><a href="#plans">料金のこと</a><a href="#about">お店のこと</a><a href="#access">アクセス</a></nav>
+      <a class="header-contact" href={shop.phoneHref}><Icon name="phone" /><span>お問い合わせ</span><span class="contact-number">{shop.phone}</span></a>
+    </header>
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-topline"><span>HANNO, SAITAMA</span><span>SNACK & KARAOKE</span><span class="hero-floor">2F <span>↗</span></span></div>
+        <div class="hero-picture-wrap"><picture class="hero-picture"><source media="(max-width: 600px)" srcset="/images/hero-mobile.webp" /><img src="/images/hero-desktop.webp" width="1920" height="1280" alt="柔らかな夜の光に照らされたカラオケマイクとグラスのイメージ" fetchpriority="high" /></picture><span class="image-caption">A LITTLE DRINK. A LITTLE SONG.</span></div>
+        <div class="hero-copy"><p class="hero-eyebrow"><span class="tiny-star">✧</span> 飯能駅から、歩いて1分のスナック。</p><h1 id="hero-title"><span class="hero-line">今夜は、</span><span class="hero-line">もう一曲<span class="period">。</span></span></h1><p class="hero-description">歌って、飲んで、笑いあって。</p><p class="hero-offer">歌い放題・飲み放題 <span>60分 <strong>¥2,500</strong>〜</span></p><a class="text-link hero-link" href="#plans">Fleurirの楽しみ方 <span class="arrow-circle"><Icon name="arrow" /></span></a></div>
+        <div class="hero-wordmark" aria-hidden="true">Fleurir<span>✧</span></div>
+        <div class="hero-bottom"><span>20:00 — LAST <i></i> 水・日 定休</span><a href="#plans">SCROLL TO EXPLORE <span>↓</span></a></div>
+      </section>
+      <Welcome />
+      <Rates />
+      <Menu />
+      <section class="access section-pad" id="access" aria-labelledby="access-title"><div class="access-title" data-reveal><p class="eyebrow"><span>04</span> FIND YOUR WAY HERE</p><h2 id="access-title">駅から1分。<br />今夜の寄り道へ。</h2></div><div class="access-layout"><div class="address-block" data-reveal><div class="station-note"><Icon name="pin" /><span>飯能駅から徒歩<strong>1</strong>分</span></div><p class="postal">〒357-0035</p><p class="address">埼玉県飯能市柳町23-13</p><p class="address-floor">Fleurirは、2階です。<span>2F ↗</span></p><a class="outline-button" href={shop.maps} target="_blank" rel="noopener noreferrer">Googleマップで見る <Icon name="external" /><span class="sr-only">（新しいタブで開きます）</span></a><p class="parking-note">専用駐車場はありません。<br />お隣にタイムズの駐車場があります。</p></div><dl class="shop-details" data-reveal><div><dt>店名</dt><dd>Fleurir <span>（フルリール）</span></dd></div><div><dt>営業時間</dt><dd>{shop.hours}</dd></div><div><dt>定休日</dt><dd>{shop.closed}</dd></div><div><dt>お席</dt><dd>2階 20席 ／ 3階 10席</dd></div><div><dt>喫煙</dt><dd>喫煙可能</dd></div><div><dt>テイクアウト<br />デリバリー</dt><dd>なし</dd></div><div><dt>お問い合わせ</dt><dd><a href={shop.phoneHref}>{shop.phone} <Icon name="arrow" /></a></dd></div></dl></div></section>
+      <aside class="downstairs section-pad" aria-labelledby="downstairs-title"><span class="downstairs-floor" aria-hidden="true">1<span>F</span><Icon name="down" /></span><div><p class="eyebrow">ONE FLOOR DOWN</p><h2 id="downstairs-title">お食事は、1階で。</h2><p>同じ建物のラーメン居酒屋も、どうぞ。</p></div><a href={shop.downstairs} class="downstairs-link" target="_blank" rel="noopener noreferrer"><img class="renge-logo" src="/images/renge-logo.webp" width="1280" height="1280" alt="ラーメン居酒屋 蓮華のロゴ" loading="lazy" /><span class="renge-link-text"><small>ラーメン居酒屋</small><b>蓮華のサイトへ</b></span><Icon name="external" /><span class="sr-only">（新しいタブで開きます）</span></a></aside>
+      <Contact />
+    </main>
+    <footer class="site-footer"><a href="#top" aria-label="Fleurir トップへ"><Logo /></a><span>飯能の夜に、もう一曲。</span><a href={shop.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram（新しいタブで開きます）"><Icon name="instagram" /></a><small>© {new Date().getFullYear()} Fleurir</small><a class="back-top" href="#top">BACK TO TOP ↑</a></footer>
+    <div class="mobile-actions"><a href={shop.phoneHref}><Icon name="phone" />電話する</a><a href={shop.maps} target="_blank" rel="noopener noreferrer"><Icon name="pin" />地図を見る<span class="sr-only">（新しいタブで開きます）</span></a></div>
+    <script>import '../scripts/interactions';</script>
+  </body>
 </html>

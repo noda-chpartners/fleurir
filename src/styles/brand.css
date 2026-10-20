@@ -1,0 +1,160 @@
+/* Colours and typography drawn from Fleurir's supplied floral logo. */
+:root {
+  --ink: #403344;
+  --paper: #fff9fc;
+  --blue: #cbe7f6;
+  --rose: #ad5279;
+  --white: #fffbfd;
+  --line: #e3d2dd;
+  --number: Arial, 'Noto Sans JP', sans-serif;
+}
+.contact-number, .hero-floor, .hero-offer strong, .plan-index,
+.plan-time strong, .plan-price, .plan-price strong, .plan-price > span,
+.rates-seats b, .rates-seats b > span, .rates-seats > span,
+.food-number, .eyebrow > span, .station-note strong, .postal,
+.address-floor > span, .downstairs-floor, .downstairs-floor > span,
+.contact-phone, .shop-details dd a, .contact-visual .contact-phone,
+.header-contact > .contact-number {
+  font-family: var(--number);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: 'lnum' 1, 'tnum' 1;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.plan-time strong, .plan-price strong, .rates-seats b { font-weight: 500; }
+.site-header { background: var(--blue); color: var(--ink); border-color: #cba9bd80; }
+.brand-mark { grid-template-columns: 69px auto; column-gap: 11px; }
+.brand-emblem { grid-column: 1; grid-row: 1 / 3; width: 69px; height: 65px; object-fit: contain; border-radius: 50%; }
+.brand-word { grid-column: 2; font-style: normal; font-size: 36px; letter-spacing: -.03em; line-height: 1.15; }
+.brand-sub { grid-column: 2; font-size: 8px; letter-spacing: .1em; margin-top: 2px; }
+.site-header nav { margin-left: 0; }
+.site-header nav a::after { background: var(--rose); }
+.hero {
+  color: var(--ink);
+  background: radial-gradient(ellipse at 25% 42%, #f4c6dce6, transparent 54%), var(--blue);
+}
+.hero-picture-wrap { left: 46%; bottom: 105px; border-radius: 150px 150px 14px 14px; }
+.hero-picture-wrap::after { background: linear-gradient(90deg, #cbe7f629, transparent 35%); }
+.hero-picture img { filter: brightness(.95); }
+.hero-copy { padding-left: 7.2vw; }
+.hero h1 { font-size: clamp(49px, 4.7vw, 68px); letter-spacing: .08em; text-shadow: none; }
+.tiny-star { color: var(--rose); }
+.hero-description { font-size: 14px; }
+.hero-wordmark { font-style: normal; color: #a54d78; font-size: clamp(80px, 9vw, 128px); bottom: 55px; }
+.hero-wordmark > span { color: #965a8d; }
+.hero-bottom { border-color: #b787a763; }
+.hero-bottom i { background: #a3789166; }
+.hero-image-note { color: #655366; }
+.hero-link:hover .arrow-circle { background: var(--rose); color: white; }
+.welcome, .food-menu { background: var(--paper); }
+.welcome-gallery figure, .rates-photo > img, .food-photo { border-radius: 12px; }
+.gallery-spark { color: #f8d0e5; }
+.eyebrow, .plan-index, .food-number { color: var(--rose); }
+.rates { background: #e3f1fa; }
+.rates .price-row, .rates-seats { border-color: #b9cdda; }
+.rates .price-note, .food-image-note { color: #675968; }
+.sheet-heading > span:first-child, .welcome-instagram > span:nth-child(2) { font-style: normal; }
+.poster-trigger { background: #f5e4ed; border-radius: 10px; }
+.food-stamp { color: white; }
+.access { background: #fff5fa; }
+.outline-button { border-color: #b57294; border-radius: 7px; }
+.outline-button:hover { background: var(--rose); color: white; }
+.downstairs { background: #f1eaf4; gap: 32px; }
+.downstairs-link { grid-template-columns: 104px 1fr 22px; align-items: center; gap: 18px; border: 1px solid #dfcedc; border-radius: 12px; background: white; padding: 12px 18px 12px 12px; min-width: 330px; }
+.renge-logo { width: 104px; height: 104px; object-fit: contain; }
+.renge-link-text { display: flex; flex-direction: column; gap: 5px; }
+.renge-link-text small { font-size: 10px; }
+.renge-link-text b { font-size: 16px; font-weight: 500; }
+.downstairs-link:hover { border-color: var(--rose); }
+.contact-visual { background: radial-gradient(ellipse at 40% 50%, #f5d0e3, transparent 68%), var(--blue); color: var(--ink); }
+.original-brand { padding: 0; background: none; border-radius: 14px; overflow: hidden; }
+.contact-visual .contact-phone { border-color: #ab7c99; }
+.line-contact { background: #fffbfd; border-radius: 10px; }
+.site-footer { background: var(--blue); color: var(--ink); border-color: #cba9bd80; }
+.site-footer > small { color: #675968; }
+.site-footer .brand-mark { grid-template-columns: 48px auto; }
+.site-footer .brand-emblem { width: 48px; height: 45px; }
+.site-footer .brand-word { font-style: normal; }
+.mobile-actions { border-color: #d7b4c9; }
+.mobile-actions > a:first-child { background: var(--rose); color: white; }
+.mobile-actions > a:last-child { background: #e5f1fa; }
+@media (max-width: 1100px) {
+  .brand-mark { grid-template-columns: 57px auto; column-gap: 8px; }
+  .brand-emblem { width: 57px; height: 54px; }
+  .brand-word { font-size: 32px; }
+  .downstairs-link { min-width: 285px; grid-template-columns: 85px 1fr 18px; gap: 12px; }
+  .renge-logo { width: 85px; height: 85px; }
+}
+@media (max-width: 768px) {
+  .brand-mark { grid-template-columns: 48px auto; gap: 0 7px; }
+  .brand-emblem { width: 48px; height: 45px; }
+  .brand-word { font-size: 29px; }
+  .brand-sub { font-size: 6px; }
+  .hero { height: 800px; }
+  .hero-copy { padding-top: 75px; }
+  .hero h1 { font-size: 48px; line-height: 1.45; }
+  .hero-eyebrow { margin-bottom: 20px; }
+  .hero-description { font-size: 13px; margin-top: 15px; }
+  .hero-offer { margin-top: 12px; }
+  .hero-picture-wrap { inset: 440px 7vw 78px; border-radius: 80px 80px 10px 10px; }
+  .hero-picture img { height: 100%; margin-top: 0; object-position: center 76%; }
+  .hero-wordmark { display: none; }
+  .image-caption { font-size: 8px; }
+  .hero-image-note { bottom: 64px; }
+  .downstairs-link { margin-left: 0; width: 100%; }
+}
+@media (max-width: 480px) {
+  .brand-mark { grid-template-columns: 40px auto; column-gap: 6px; }
+  .brand-emblem { width: 40px; height: 38px; }
+  .brand-word { font-size: 25px; }
+  .brand-sub { font-size: 5px; letter-spacing: .04em; }
+  .site-header nav { gap: 13px; }
+  .hero { height: 790px; }
+  .hero-copy { padding-top: 75px; }
+  .hero h1 { font-size: 45px; }
+  .hero-description { font-size: 12px; }
+  .hero-picture-wrap { top: 425px; }
+  .hero-offer strong { font-size: 22px; }
+  .downstairs-link { grid-template-columns: 83px 1fr 20px; padding: 10px 15px 10px 10px; min-width: 0; gap: 16px; }
+  .renge-logo { width: 83px; height: 83px; }
+  .renge-link-text b { font-size: 15px; }
+}
+
+/* Fill the first screen, including the header and mobile contact bar. */
+:root { --hero-header-height: 100px; --hero-action-height: 0px; }
+.hero {
+  width: 100%;
+  height: calc(100svh - var(--hero-header-height) - var(--hero-action-height));
+  min-height: 0;
+}
+@media (max-width: 768px) {
+  :root {
+    --hero-header-height: 84px;
+    --hero-action-height: calc(58px + env(safe-area-inset-bottom, 0px));
+  }
+}
+@media (max-width: 480px) {
+  :root { --hero-header-height: 80px; }
+}
+@media (min-width: 769px) and (max-height: 760px) {
+  .hero-copy { padding-top: 68px; }
+  .hero h1 { font-size: clamp(40px, 7svh, 53px); line-height: 1.4; }
+  .hero-eyebrow { margin-bottom: 18px; }
+  .hero-description { margin-top: 14px; }
+  .hero-offer { margin-top: 12px; }
+  .hero-offer + .hero-link { margin-top: 12px; }
+}
+@media (max-width: 768px) and (max-height: 760px) {
+  .hero-copy { padding-top: 55px; }
+  .hero-eyebrow { margin-bottom: 14px; }
+  .hero h1 { font-size: 36px; line-height: 1.4; }
+  .hero-description { font-size: 11px; margin-top: 10px; }
+  .hero-offer { margin-top: 10px; }
+  .hero-offer strong { font-size: 20px; line-height: 1.4; }
+  .hero-offer + .hero-link { margin-top: 10px; }
+  .hero-link .arrow-circle { width: 32px; height: 32px; }
+  .hero-picture-wrap { top: 340px; bottom: 54px; }
+  .hero-bottom { height: 44px; }
+  .hero-image-note { bottom: 46px; }
+}
