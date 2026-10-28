@@ -427,7 +427,7 @@
 }
 .contact-visual {
   display: grid;
-  grid-template-columns: 190px 1fr 230px;
+  grid-template-columns: 190px 1fr 314px;
   gap: 42px;
   align-items: center;
   background: var(--ink);
@@ -474,12 +474,14 @@
   color: var(--ink);
   padding: 17px;
   display: flex;
+  flex-direction: column;
   gap: 12px;
   align-items: center;
 }
 .line-contact > img {
-  width: 85px;
-  height: 85px;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
 }
 .line-contact > div > span {
   font-size: 10px;
@@ -740,8 +742,8 @@
     padding: 15px;
   }
   .line-contact > img {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: auto;
   }
   .line-contact > div > span {
     font-size: 12px;
