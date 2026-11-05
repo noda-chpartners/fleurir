@@ -3,7 +3,7 @@ export const shop = {
   instagram: 'https://www.instagram.com/fleurir755?exln=MTlocjh0bHZ4Z3p3',
   maps: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('埼玉県飯能市柳町23-13'),
   downstairs: 'https://ramen-renge.pages.dev/',
-  line: 'https://line.me/ti/p/E3fkmNVDdw',
+  line: 'https://lin.ee/sNoezpm',
 };
 export const plans = [{ minutes: 60, price: '2,500' }, { minutes: 90, price: '3,500' }];
 export const snacks = [
